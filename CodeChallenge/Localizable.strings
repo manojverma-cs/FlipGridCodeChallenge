@@ -22,3 +22,8 @@
 "error.title" = "Error";
 "unknownimage.message" = "Please select and image to proceed";
 "unknownerror.message" = "Unknown error occured. Please try again.";
+"empty.avatar.message" = "Please select avatar image";
+"empty.firstname.message" = "Please enter first name";
+"empty.emailaddress.message" = "Please enter email address";
+"empty.password.message" = "Please enter password";
+"empty.website.message" = "Please enter website";

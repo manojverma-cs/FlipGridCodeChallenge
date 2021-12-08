@@ -75,4 +75,24 @@ class LocalizedStrings {
                                                        bundle: bundle,
                                                        value: "",
                                                        comment: "")
+    static let emptyAvatarMessage = NSLocalizedString("empty.avatar.message",
+                                                      bundle: bundle,
+                                                      value: "",
+                                                      comment: "")
+    static let emptyFirstNameMessage = NSLocalizedString("empty.firstname.message",
+                                                         bundle: bundle,
+                                                         value: "",
+                                                         comment: "")
+    static let emptyEmailAddressMessage = NSLocalizedString("empty.emailaddress.message",
+                                                            bundle: bundle,
+                                                            value: "",
+                                                            comment: "")
+    static let emptyPasswordMessage = NSLocalizedString("empty.password.message",
+                                                        bundle: bundle,
+                                                        value: "",
+                                                        comment: "")
+    static let emptyWebsiteMessage = NSLocalizedString("empty.website.message",
+                                                       bundle: bundle,
+                                                       value: "",
+                                                       comment: "")
 }

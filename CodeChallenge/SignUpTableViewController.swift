@@ -54,6 +54,14 @@ extension SignUpTableViewController: AvatarTableViewCellDelegate {
 
 extension SignUpTableViewController: FooterViewDelegate {
     func submitButtonAction() {
+        for dataModel in sections {
+            if dataModel.section.isMandatory && dataModel.value.isEmpty {
+                UIAlertController.present(withTitle: LocalizedStrings.errorTitle,
+                                          withMessage: dataModel.section.emptyMessage,
+                                          fromPresenter: self)
+                return
+            }
+        }
     }
 }
 

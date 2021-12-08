@@ -53,4 +53,28 @@ enum Section: Int {
             return false
         }
     }
+
+    var isMandatory: Bool {
+        switch self {
+        case .email, .password:
+            return true
+        default:
+            return false
+        }
+    }
+
+    var emptyMessage: String {
+        switch self {
+        case .avatar:
+            return LocalizedStrings.emptyAvatarMessage
+        case .firstName:
+            return LocalizedStrings.emptyFirstNameMessage
+        case .email:
+            return LocalizedStrings.emptyEmailAddressMessage
+        case .password:
+            return LocalizedStrings.emptyPasswordMessage
+        case .website:
+            return LocalizedStrings.emptyWebsiteMessage
+        }
+    }
 }
