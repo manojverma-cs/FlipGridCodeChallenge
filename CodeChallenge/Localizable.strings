@@ -31,3 +31,5 @@
 "protfoliosubmitted.title" = "Hello, %@";
 "invalid.email.message" = "Please enter valid email";
 "invalid.website.message" = "Please enter valid website";
+"submit.title" = "Submit";
+"signin.title" = "Sign In";

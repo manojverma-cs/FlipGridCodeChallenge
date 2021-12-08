@@ -107,6 +107,14 @@ class LocalizedStrings {
                                                          bundle: bundle,
                                                          value: "",
                                                          comment: "")
+    static let submitTitle = NSLocalizedString("submit.title",
+                                               bundle: bundle,
+                                               value: "",
+                                               comment: "")
+    static let signinTitle = NSLocalizedString("signin.title",
+                                               bundle: bundle,
+                                               value: "",
+                                               comment: "")
     static func protfolioSubmittedTitle(_ title: String) -> String {
         let protfolioSubmittedMessage = NSLocalizedString("protfoliosubmitted.title",
                                                           bundle: bundle,

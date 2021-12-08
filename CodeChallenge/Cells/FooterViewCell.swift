@@ -18,7 +18,8 @@ class FooterViewCell: UITableViewHeaderFooterView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        submitButton.layer.cornerRadius = 5
+        submitButton.setTitle(LocalizedStrings.submitTitle, for: .normal)
+        submitButton.layer.cornerRadius = 10
     }
 
     @IBAction func submitButtonAction(_ sender: UIButton) {

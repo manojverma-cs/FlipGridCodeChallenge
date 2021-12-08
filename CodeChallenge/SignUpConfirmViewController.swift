@@ -14,6 +14,7 @@ class SignUpConfirmViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
 
     var sections: [DataModel]?
 
@@ -24,6 +25,8 @@ class SignUpConfirmViewController: UIViewController {
     }
 
     func setupUI() {
+        submitButton.setTitle(LocalizedStrings.signinTitle, for: .normal)
+        submitButton.layer.cornerRadius = 10
         summaryLabel.text = LocalizedStrings.protfolioSubmittedMessage
         for section in sections ?? [] {
             switch section.section {
