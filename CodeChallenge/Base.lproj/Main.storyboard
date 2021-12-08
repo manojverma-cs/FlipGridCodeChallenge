@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,6 +98,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="CU5-VF-RJi"/>
+                    <connections>
+                        <segue destination="YbS-gz-XCZ" kind="show" identifier="signUpConfirmSegue" id="8gO-k5-nVC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1Q-Ex-nkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,8 +125,81 @@
             </objects>
             <point key="canvasLocation" x="-391" y="-672"/>
         </scene>
+        <!--Sign Up Confirm View Controller-->
+        <scene sceneID="LAf-Is-A9Y">
+            <objects>
+                <viewController storyboardIdentifier="SignUpConfirmViewController" id="YbS-gz-XCZ" customClass="SignUpConfirmViewController" customModule="CodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G6Y-6O-WrD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JiZ-jv-26o">
+                                <rect key="frame" x="0.0" y="140" width="200" height="396"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUB-3j-5dX">
+                                        <rect key="frame" x="100" y="8" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qqA-RT-HIe">
+                                        <rect key="frame" x="50" y="28" width="100" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="M0t-S0-GI8"/>
+                                            <constraint firstAttribute="height" constant="150" id="MyO-J9-VKQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpI-e8-O51">
+                                        <rect key="frame" x="75" y="198" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzk-xA-NYK">
+                                        <rect key="frame" x="75" y="268" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKr-ks-lF2">
+                                        <rect key="frame" x="75" y="338" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qqA-RT-HIe" firstAttribute="width" secondItem="JiZ-jv-26o" secondAttribute="width" multiplier="0.5" id="smg-Uw-yMf"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="20"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Li8-Q8-pQ0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JiZ-jv-26o" firstAttribute="leading" secondItem="Li8-Q8-pQ0" secondAttribute="leading" id="aT1-v1-7rb"/>
+                            <constraint firstItem="JiZ-jv-26o" firstAttribute="top" secondItem="Li8-Q8-pQ0" secondAttribute="top" id="r7x-Ih-i5c"/>
+                            <constraint firstItem="Li8-Q8-pQ0" firstAttribute="trailing" secondItem="JiZ-jv-26o" secondAttribute="trailing" id="wMv-Fe-Nd1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SkF-ho-dl1"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="FKr-ks-lF2" id="biX-ji-hB2"/>
+                        <outlet property="nameLabel" destination="dzk-xA-NYK" id="jST-dG-Sed"/>
+                        <outlet property="profileImageView" destination="qqA-RT-HIe" id="NJE-wi-EPY"/>
+                        <outlet property="summaryLabel" destination="XUB-3j-5dX" id="UhA-MD-zjp"/>
+                        <outlet property="websiteLabel" destination="GpI-e8-O51" id="Hyp-y4-KmC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oie-nK-PEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="258"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

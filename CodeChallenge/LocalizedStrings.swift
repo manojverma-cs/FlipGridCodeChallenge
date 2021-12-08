@@ -95,4 +95,23 @@ class LocalizedStrings {
                                                        bundle: bundle,
                                                        value: "",
                                                        comment: "")
+    static let protfolioSubmittedMessage = NSLocalizedString("protfoliosubmitted.message",
+                                                             bundle: bundle,
+                                                             value: "",
+                                                             comment: "")
+    static let invalidEmailMessage = NSLocalizedString("invalid.email.message",
+                                                       bundle: bundle,
+                                                       value: "",
+                                                       comment: "")
+    static let invalidWebsiteMessage = NSLocalizedString("invalid.website.message",
+                                                         bundle: bundle,
+                                                         value: "",
+                                                         comment: "")
+    static func protfolioSubmittedTitle(_ title: String) -> String {
+        let protfolioSubmittedMessage = NSLocalizedString("protfoliosubmitted.title",
+                                                          bundle: bundle,
+                                                          value: "",
+                                                          comment: "")
+        return String.localizedStringWithFormat(protfolioSubmittedMessage, title)
+    }
 }

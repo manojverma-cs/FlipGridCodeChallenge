@@ -63,6 +63,24 @@ enum Section: Int {
         }
     }
 
+    var validateEmail: Bool {
+        switch self {
+        case .email:
+            return true
+        default:
+            return false
+        }
+    }
+
+    var validateLink: Bool {
+        switch self {
+        case .website:
+            return true
+        default:
+            return false
+        }
+    }
+
     var emptyMessage: String {
         switch self {
         case .avatar:

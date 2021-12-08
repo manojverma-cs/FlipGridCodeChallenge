@@ -10,6 +10,7 @@ import UIKit
 protocol DataInputTableViewDelegate: class {
     func updateSection(_ dataModel: DataModel)
     func moveToNextResponder(fromTag tag: Int)
+    func onSelection(_ dataModel: DataModel)
 }
 
 class DataInputTableViewCell: UITableViewCell {
@@ -50,6 +51,12 @@ extension DataInputTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.moveToNextResponder(fromTag: textField.tag)
         return false
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if let dataModel = dataModel {
+            delegate?.onSelection(dataModel)
+        }
     }
 
     @objc func textFieldValueChanged(_ textField: UITextField) {

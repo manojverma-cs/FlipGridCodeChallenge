@@ -22,6 +22,7 @@ class SignUpTableViewController: UITableViewController {
         static let dataInputCellId = "DataInputTableViewCell"
         static let headerViewCellId = "HeaderViewCell"
         static let footerViewCellId = "FooterViewCell"
+        static let signUpConfirmSegue = "signUpConfirmSegue"
         static let headerViewHeight: CGFloat = 60.0
         static let footerViewHeight: CGFloat = 100.0
     }
@@ -32,6 +33,18 @@ class SignUpTableViewController: UITableViewController {
         setupTableView()
         cameraManager = CameraManager(withPresenter: self)
         cameraManager?.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(_ notification: Notification) {
+        
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let signUpConfirmViewController = segue.destination as? SignUpConfirmViewController {
+            signUpConfirmViewController.sections = sections
+        }
     }
 
     /// setup TableView and register required cells
@@ -55,13 +68,28 @@ extension SignUpTableViewController: AvatarTableViewCellDelegate {
 extension SignUpTableViewController: FooterViewDelegate {
     func submitButtonAction() {
         for dataModel in sections {
-            if dataModel.section.isMandatory && dataModel.value.isEmpty {
+            if dataModel.section.isMandatory {
+                if dataModel.value.isEmpty {
+                    UIAlertController.present(withTitle: LocalizedStrings.errorTitle,
+                                              withMessage: dataModel.section.emptyMessage,
+                                              fromPresenter: self)
+                    return
+                }
+            }
+            if dataModel.section.validateEmail && !dataModel.value.isEmpty && !dataModel.value.isValidEmail() {
                 UIAlertController.present(withTitle: LocalizedStrings.errorTitle,
-                                          withMessage: dataModel.section.emptyMessage,
+                                          withMessage: LocalizedStrings.invalidEmailMessage,
+                                          fromPresenter: self)
+                return
+            }
+            if dataModel.section.validateLink && !dataModel.value.isEmpty && !dataModel.value.isLink() {
+                UIAlertController.present(withTitle: LocalizedStrings.errorTitle,
+                                          withMessage: LocalizedStrings.invalidWebsiteMessage,
                                           fromPresenter: self)
                 return
             }
         }
+        performSegue(withIdentifier: SignUpViewConstants.signUpConfirmSegue, sender: self)
     }
 }
 
@@ -77,6 +105,14 @@ extension SignUpTableViewController: DataInputTableViewDelegate {
             cell.textField.becomeFirstResponder()
         } else {
             view.endEditing(true)
+        }
+    }
+
+    func onSelection(_ dataModel: DataModel) {
+        if let index = sections.firstIndex(where: { $0.section == dataModel.section }) {
+            DispatchQueue.main.async {
+                self.tableView.scrollToRow(at: IndexPath(row: 0, section: index), at: .top, animated: true)
+            }
         }
     }
 }

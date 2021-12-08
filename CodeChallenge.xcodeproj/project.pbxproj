@@ -32,6 +32,8 @@
 		F5F25A4F2760C417008AB08A /* FooterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F25A4E2760C417008AB08A /* FooterViewCell.xib */; };
 		F5F25A542760C60F008AB08A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F25A532760C60F008AB08A /* Colors.xcassets */; };
 		F5F25A5C2760C91D008AB08A /* SignUpTableViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F25A5B2760C91D008AB08A /* SignUpTableViewController+UITableView.swift */; };
+		F5F25A612760D0FC008AB08A /* SignUpConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F25A602760D0FC008AB08A /* SignUpConfirmViewController.swift */; };
+		F5F25A6927614DE7008AB08A /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F25A6827614DE7008AB08A /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		F5F25A4E2760C417008AB08A /* FooterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterViewCell.xib; sourceTree = "<group>"; };
 		F5F25A532760C60F008AB08A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F5F25A5B2760C91D008AB08A /* SignUpTableViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpTableViewController+UITableView.swift"; sourceTree = "<group>"; };
+		F5F25A602760D0FC008AB08A /* SignUpConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfirmViewController.swift; sourceTree = "<group>"; };
+		F5F25A6827614DE7008AB08A /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			children = (
 				F50723692760B4BE00274365 /* FileManager+Ext.swift */,
 				F507236E2760B83300274365 /* UIAlertController+Ext.swift */,
+				F5F25A6827614DE7008AB08A /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				F5E2540C275F302700A191AB /* SceneDelegate.swift */,
 				F515736C2760834E00CD67CF /* Section.swift */,
 				F51573712760837100CD67CF /* DataModel.swift */,
+				F5F25A602760D0FC008AB08A /* SignUpConfirmViewController.swift */,
 				F5F25A5B2760C91D008AB08A /* SignUpTableViewController+UITableView.swift */,
 				F5E253FE275F1A7800A191AB /* SignUpTableViewController.swift */,
 				F51573842760B31100CD67CF /* SignUpTableViewController+CameraManagerDelegate.swift */,
@@ -358,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F25A6927614DE7008AB08A /* String+Ext.swift in Sources */,
 				F515736D2760834E00CD67CF /* Section.swift in Sources */,
 				F5E25412275F402F00A191AB /* AvatarTableViewCell.swift in Sources */,
 				F507236A2760B4BE00274365 /* FileManager+Ext.swift in Sources */,
@@ -372,6 +379,7 @@
 				F5F25A4A2760C40D008AB08A /* FooterViewCell.swift in Sources */,
 				F5E253B9275F12B600A191AB /* AppDelegate.swift in Sources */,
 				F51573852760B31100CD67CF /* SignUpTableViewController+CameraManagerDelegate.swift in Sources */,
+				F5F25A612760D0FC008AB08A /* SignUpConfirmViewController.swift in Sources */,
 				F515737A2760A5CE00CD67CF /* CameraManager.swift in Sources */,
 				F5F25A5C2760C91D008AB08A /* SignUpTableViewController+UITableView.swift in Sources */,
 			);
