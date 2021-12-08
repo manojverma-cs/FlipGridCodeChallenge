@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  CodeChallenge
 //
-//  Created by MANOJ VEMRA on 12/6/21.
+//  Created by MANOJ VERMA on 12/6/21.
 //
 
 import UIKit

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F515734A27607E9F00CD67CF /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515734927607E9F00CD67CF /* HeaderViewCell.swift */; };
+		F515735227607F2B00CD67CF /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F515735127607F2B00CD67CF /* HeaderViewCell.xib */; };
+		F515735D2760811100CD67CF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F515735C2760811100CD67CF /* Localizable.strings */; };
+		F51573622760812700CD67CF /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51573612760812700CD67CF /* LocalizedStrings.swift */; };
+		F515736D2760834E00CD67CF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F515736C2760834E00CD67CF /* Section.swift */; };
+		F51573722760837100CD67CF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51573712760837100CD67CF /* DataModel.swift */; };
 		F5E253B9275F12B600A191AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E253B8275F12B600A191AB /* AppDelegate.swift */; };
-		F5E253BD275F12B600A191AB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E253BC275F12B600A191AB /* SignUpViewController.swift */; };
 		F5E253C0275F12B600A191AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E253BE275F12B600A191AB /* Main.storyboard */; };
 		F5E253C3275F12B600A191AB /* CodeChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5E253C1275F12B600A191AB /* CodeChallenge.xcdatamodeld */; };
 		F5E253C5275F12B700A191AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E253C4275F12B700A191AB /* Assets.xcassets */; };
@@ -17,6 +22,8 @@
 		F5E253DE275F12B700A191AB /* CodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E253DD275F12B700A191AB /* CodeChallengeUITests.swift */; };
 		F5E253FF275F1A7800A191AB /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E253FE275F1A7800A191AB /* SignUpTableViewController.swift */; };
 		F5E2540D275F302700A191AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E2540C275F302700A191AB /* SceneDelegate.swift */; };
+		F5E25412275F402F00A191AB /* AvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E25411275F402F00A191AB /* AvatarTableViewCell.swift */; };
+		F5E2541A275F405400A191AB /* DataInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E25419275F405400A191AB /* DataInputTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F515734927607E9F00CD67CF /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
+		F515735127607F2B00CD67CF /* HeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewCell.xib; sourceTree = "<group>"; };
+		F515735C2760811100CD67CF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F51573612760812700CD67CF /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		F515736C2760834E00CD67CF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		F51573712760837100CD67CF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F5E253B5275F12B600A191AB /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E253B8275F12B600A191AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5E253BC275F12B600A191AB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F5E253BF275F12B600A191AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5E253C2275F12B600A191AB /* CodeChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeChallenge.xcdatamodel; sourceTree = "<group>"; };
 		F5E253C4275F12B700A191AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +65,8 @@
 		F5E253DF275F12B700A191AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E253FE275F1A7800A191AB /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		F5E2540C275F302700A191AB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5E25411275F402F00A191AB /* AvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarTableViewCell.swift; sourceTree = "<group>"; };
+		F5E25419275F405400A191AB /* DataInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +119,16 @@
 			children = (
 				F5E253B8275F12B600A191AB /* AppDelegate.swift */,
 				F5E2540C275F302700A191AB /* SceneDelegate.swift */,
-				F5E253BC275F12B600A191AB /* SignUpViewController.swift */,
+				F515736C2760834E00CD67CF /* Section.swift */,
+				F51573712760837100CD67CF /* DataModel.swift */,
 				F5E253FE275F1A7800A191AB /* SignUpTableViewController.swift */,
+				F5E25411275F402F00A191AB /* AvatarTableViewCell.swift */,
+				F515734927607E9F00CD67CF /* HeaderViewCell.swift */,
+				F515735127607F2B00CD67CF /* HeaderViewCell.xib */,
+				F5E25419275F405400A191AB /* DataInputTableViewCell.swift */,
 				F5E253BE275F12B600A191AB /* Main.storyboard */,
+				F515735C2760811100CD67CF /* Localizable.strings */,
+				F51573612760812700CD67CF /* LocalizedStrings.swift */,
 				F5E253C4275F12B700A191AB /* Assets.xcassets */,
 				F5E253C6275F12B700A191AB /* LaunchScreen.storyboard */,
 				F5E253C9275F12B700A191AB /* Info.plist */,
@@ -240,7 +261,9 @@
 			files = (
 				F5E253C8275F12B700A191AB /* LaunchScreen.storyboard in Resources */,
 				F5E253C5275F12B700A191AB /* Assets.xcassets in Resources */,
+				F515735D2760811100CD67CF /* Localizable.strings in Resources */,
 				F5E253C0275F12B600A191AB /* Main.storyboard in Resources */,
+				F515735227607F2B00CD67CF /* HeaderViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F515736D2760834E00CD67CF /* Section.swift in Sources */,
+				F5E25412275F402F00A191AB /* AvatarTableViewCell.swift in Sources */,
+				F51573622760812700CD67CF /* LocalizedStrings.swift in Sources */,
 				F5E2540D275F302700A191AB /* SceneDelegate.swift in Sources */,
 				F5E253FF275F1A7800A191AB /* SignUpTableViewController.swift in Sources */,
+				F51573722760837100CD67CF /* DataModel.swift in Sources */,
+				F515734A27607E9F00CD67CF /* HeaderViewCell.swift in Sources */,
 				F5E253C3275F12B600A191AB /* CodeChallenge.xcdatamodeld in Sources */,
-				F5E253BD275F12B600A191AB /* SignUpViewController.swift in Sources */,
+				F5E2541A275F405400A191AB /* DataInputTableViewCell.swift in Sources */,
 				F5E253B9275F12B600A191AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

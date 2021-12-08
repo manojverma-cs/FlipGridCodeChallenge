@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderViewCell" customModule="CodeChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sf7-oL-o6h">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xov-x9-UGk">
+                            <rect key="frame" x="20" y="10" width="374" height="798"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Xov-x9-UGk" secondAttribute="trailing" constant="20" id="0R3-3b-qvp"/>
+                        <constraint firstAttribute="bottom" secondItem="Xov-x9-UGk" secondAttribute="bottom" constant="10" id="Nv0-GM-K3e"/>
+                        <constraint firstItem="Xov-x9-UGk" firstAttribute="leading" secondItem="Sf7-oL-o6h" secondAttribute="leading" constant="20" id="bld-36-Ar1"/>
+                        <constraint firstItem="Xov-x9-UGk" firstAttribute="top" secondItem="Sf7-oL-o6h" secondAttribute="top" constant="10" id="yG1-zq-nR9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Sf7-oL-o6h" secondAttribute="bottom" id="NzX-hR-DPS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sf7-oL-o6h" secondAttribute="trailing" id="kl8-9Q-aox"/>
+                <constraint firstItem="Sf7-oL-o6h" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sHj-y1-Lii"/>
+                <constraint firstItem="Sf7-oL-o6h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zq7-Ze-RpA"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="Xov-x9-UGk" id="Gfa-B5-tr7"/>
+            </connections>
+            <point key="canvasLocation" x="-62" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

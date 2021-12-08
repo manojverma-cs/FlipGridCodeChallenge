@@ -2,7 +2,7 @@
 //  CodeChallengeUITests.swift
 //  CodeChallengeUITests
 //
-//  Created by MANOJ VEMRA on 12/6/21.
+//  Created by MANOJ VERMA on 12/6/21.
 //
 
 import XCTest

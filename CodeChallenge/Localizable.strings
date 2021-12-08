@@ -1,0 +1,15 @@
+/* 
+  Localized.strings
+  CodeChallenge
+
+  Created by MANOJ VERMA on 12/7/21.
+  
+*/
+
+"avatar.title" = "Tap to add avatar";
+"firstName.title" = "First Name";
+"emailAddress.title" = "Email Address";
+"password.title" = "Password";
+"website.title" = "Website";
+"profileCreation.title" = "Profile Creation";
+"profileCreation.description" = "Use the form below to submit our portfolio. An email and password are frequired.";
