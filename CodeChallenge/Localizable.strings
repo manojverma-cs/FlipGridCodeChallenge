@@ -13,3 +13,11 @@
 "website.title" = "Website";
 "profileCreation.title" = "Profile Creation";
 "profileCreation.description" = "Use the form below to submit our portfolio. An email and password are frequired.";
+"cameraPermission.message" = "App does not have access to your camera. To enable access, tap settings and turn on Camera.";
+"galleryPermission.message" = "App does not have access to your camera. To enable access, tap settings and turn on Gallery.";
+"settings.title" = "Settings";
+"cancel.title" = "Cancel";
+"camera.title" = "Camera";
+"gallery.title" = "Gallery";
+"error.title" = "Error";
+"unknownimage.message" = "Please select and image to proceed";

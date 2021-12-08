@@ -39,4 +39,36 @@ class LocalizedStrings {
                                                               bundle: bundle,
                                                               value: "",
                                                               comment: "")
+    static let cameraPermissionMessage = NSLocalizedString("cameraPermission.message",
+                                                           bundle: bundle,
+                                                           value: "",
+                                                           comment: "")
+    static let galleryPermissionMessage = NSLocalizedString("galleryPermission.message",
+                                                            bundle: bundle,
+                                                            value: "",
+                                                            comment: "")
+    static let settingsTitle = NSLocalizedString("settings.title",
+                                                 bundle: bundle,
+                                                 value: "",
+                                                 comment: "")
+    static let cancelTitle = NSLocalizedString("cancel.title",
+                                               bundle: bundle,
+                                               value: "",
+                                               comment: "")
+    static let cameraTitle = NSLocalizedString("camera.title",
+                                               bundle: bundle,
+                                               value: "",
+                                               comment: "")
+    static let galleryTitle = NSLocalizedString("gallery.title",
+                                                bundle: bundle,
+                                                value: "",
+                                                comment: "")
+    static let errorTitle = NSLocalizedString("error.title",
+                                              bundle: bundle,
+                                              value: "",
+                                              comment: "")
+    static let unknownimageMessage = NSLocalizedString("unknownimage.message",
+                                                       bundle: bundle,
+                                                       value: "",
+                                                       comment: "")
 }

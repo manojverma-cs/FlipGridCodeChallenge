@@ -15,10 +15,12 @@ class SignUpTableViewController: UITableViewController {
                                  DataModel(section: .password, value: ""),
                                  DataModel(section: .website, value: "")]
 
-    struct SignUpTableViewConstants {
-        static let avatarCellIdentifier = "AvatarTableViewCell"
-        static let dataInputCellIdentifier = "DataInputTableViewCell"
-        static let headerViewCellIdentifier = "HeaderViewCell"
+    var cameraManager: CameraManager?
+
+    struct SignUpViewConstants {
+        static let avatarCellId = "AvatarTableViewCell"
+        static let dataInputCellId = "DataInputTableViewCell"
+        static let headerViewCellId = "HeaderViewCell"
         static let headerViewHeight: CGFloat = 60.0
     }
 
@@ -26,14 +28,16 @@ class SignUpTableViewController: UITableViewController {
         super.viewDidLoad()
         title = LocalizedStrings.profileCreationTitle
         setupTableView()
+        cameraManager = CameraManager(withPresenter: self)
+        cameraManager?.delegate = self
     }
 
     /// setup TableView and register required cells
     func setupTableView() {
         tableView.tableFooterView = UIView()
-        tableView.register(UINib(nibName: SignUpTableViewConstants.headerViewCellIdentifier,
+        tableView.register(UINib(nibName: SignUpViewConstants.headerViewCellId,
                                  bundle: nil),
-                           forHeaderFooterViewReuseIdentifier: SignUpTableViewConstants.headerViewCellIdentifier)
+                           forHeaderFooterViewReuseIdentifier: SignUpViewConstants.headerViewCellId)
     }
 }
 
@@ -41,7 +45,7 @@ extension SignUpTableViewController {
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0,
-           let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: SignUpTableViewConstants.headerViewCellIdentifier)
+           let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: SignUpViewConstants.headerViewCellId)
             as? HeaderViewCell {
             cell.titleLabel.text = LocalizedStrings.profileCreationDescription
             return cell
@@ -50,7 +54,7 @@ extension SignUpTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        section == 0 ? SignUpTableViewConstants.headerViewHeight : 0
+        section == 0 ? SignUpViewConstants.headerViewHeight : 0
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,13 +68,14 @@ extension SignUpTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section].section {
         case .avatar:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewConstants.avatarCellIdentifier)
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SignUpViewConstants.avatarCellId)
                 as? AvatarTableViewCell {
                 cell.configure(sections[indexPath.section])
+                cell.delegate = self
                 return cell
             }
         default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewConstants.dataInputCellIdentifier)
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SignUpViewConstants.dataInputCellId)
                 as? DataInputTableViewCell {
                 cell.configure(sections[indexPath.section])
                 return cell
@@ -81,5 +86,11 @@ extension SignUpTableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
+    }
+}
+
+extension SignUpTableViewController: AvatarTableViewCellDelegate {
+    func presentImagePicker() {
+        self.cameraManager?.presentOptions()
     }
 }
