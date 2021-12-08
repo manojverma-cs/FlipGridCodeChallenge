@@ -21,3 +21,4 @@
 "gallery.title" = "Gallery";
 "error.title" = "Error";
 "unknownimage.message" = "Please select and image to proceed";
+"unknownerror.message" = "Unknown error occured. Please try again.";

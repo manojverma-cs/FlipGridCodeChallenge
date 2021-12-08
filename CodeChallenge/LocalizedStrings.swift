@@ -71,4 +71,8 @@ class LocalizedStrings {
                                                        bundle: bundle,
                                                        value: "",
                                                        comment: "")
+    static let unknownErrorMessage = NSLocalizedString("unknownerror.message",
+                                                       bundle: bundle,
+                                                       value: "",
+                                                       comment: "")
 }

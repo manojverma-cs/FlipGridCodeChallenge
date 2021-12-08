@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol DataInputTableViewDelegate: class {
+    func updateSection(_ dataModel: DataModel)
+    func moveToNextResponder(fromTag tag: Int)
+}
+
 class DataInputTableViewCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var textField: UITextField!
+    weak var delegate: DataInputTableViewDelegate?
+    var dataModel: DataModel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +26,7 @@ class DataInputTableViewCell: UITableViewCell {
         containerView.layer.borderColor = UIColor.opaqueSeparator.cgColor
         containerView.layer.masksToBounds = true
         textField.delegate = self
+        textField.addTarget(self, action: #selector(textFieldValueChanged(_:)), for: .editingChanged)
     }
 
     /// override prepareForReuse to reset content before reuse
@@ -29,18 +37,25 @@ class DataInputTableViewCell: UITableViewCell {
 
     /// configure cell from DataModel
     /// - Parameter dataModel: DataModel object to prefill the data
-    func configure(_ dataModel: DataModel) {
+    func configure(_ dataModel: DataModel, tag: Int) {
+        self.dataModel = dataModel
         textField.placeholder = dataModel.section.placeholder
+        textField.keyboardType = dataModel.section.keyboardType
+        textField.isSecureTextEntry = dataModel.section.isSecureTextEntry
+        textField.tag = tag
     }
 }
 
 extension DataInputTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        delegate?.moveToNextResponder(fromTag: textField.tag)
+        return false
     }
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
+    @objc func textFieldValueChanged(_ textField: UITextField) {
+        dataModel?.value = textField.text ?? ""
+        if let dataModel = dataModel {
+            delegate?.updateSection(dataModel)
+        }
     }
 }

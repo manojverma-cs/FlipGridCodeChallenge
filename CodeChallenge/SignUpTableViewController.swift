@@ -21,7 +21,9 @@ class SignUpTableViewController: UITableViewController {
         static let avatarCellId = "AvatarTableViewCell"
         static let dataInputCellId = "DataInputTableViewCell"
         static let headerViewCellId = "HeaderViewCell"
+        static let footerViewCellId = "FooterViewCell"
         static let headerViewHeight: CGFloat = 60.0
+        static let footerViewHeight: CGFloat = 100.0
     }
 
     override func viewDidLoad() {
@@ -38,59 +40,35 @@ class SignUpTableViewController: UITableViewController {
         tableView.register(UINib(nibName: SignUpViewConstants.headerViewCellId,
                                  bundle: nil),
                            forHeaderFooterViewReuseIdentifier: SignUpViewConstants.headerViewCellId)
-    }
-}
-
-extension SignUpTableViewController {
-
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0,
-           let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: SignUpViewConstants.headerViewCellId)
-            as? HeaderViewCell {
-            cell.titleLabel.text = LocalizedStrings.profileCreationDescription
-            return cell
-        }
-        return nil
-    }
-
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        section == 0 ? SignUpViewConstants.headerViewHeight : 0
-    }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        sections.count
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch sections[indexPath.section].section {
-        case .avatar:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: SignUpViewConstants.avatarCellId)
-                as? AvatarTableViewCell {
-                cell.configure(sections[indexPath.section])
-                cell.delegate = self
-                return cell
-            }
-        default:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: SignUpViewConstants.dataInputCellId)
-                as? DataInputTableViewCell {
-                cell.configure(sections[indexPath.section])
-                return cell
-            }
-        }
-        return UITableViewCell()
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+        tableView.register(UINib(nibName: SignUpViewConstants.footerViewCellId,
+                                 bundle: nil),
+                           forHeaderFooterViewReuseIdentifier: SignUpViewConstants.footerViewCellId)
     }
 }
 
 extension SignUpTableViewController: AvatarTableViewCellDelegate {
     func presentImagePicker() {
         self.cameraManager?.presentOptions()
+    }
+}
+
+extension SignUpTableViewController: FooterViewDelegate {
+    func submitButtonAction() {
+    }
+}
+
+extension SignUpTableViewController: DataInputTableViewDelegate {
+    func updateSection(_ dataModel: DataModel) {
+        if let index = sections.firstIndex(where: { $0.section == dataModel.section }) {
+            sections[index].value = dataModel.value
+        }
+    }
+
+    func moveToNextResponder(fromTag tag: Int) {
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: tag + 1)) as? DataInputTableViewCell {
+            cell.textField.becomeFirstResponder()
+        } else {
+            view.endEditing(true)
+        }
     }
 }

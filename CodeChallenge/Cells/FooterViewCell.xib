@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FooterViewCell" customModule="CodeChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-DK-aE1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-Cs-79c">
+                            <rect key="frame" x="20" y="22" width="374" height="56"/>
+                            <color key="backgroundColor" name="buttonColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="Rvn-VH-wyo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="submitButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="YQU-9L-hnO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mWL-Cs-79c" secondAttribute="trailing" constant="20" id="KzM-h7-Np9"/>
+                        <constraint firstItem="mWL-Cs-79c" firstAttribute="centerY" secondItem="mLh-DK-aE1" secondAttribute="centerY" id="LnY-I4-816"/>
+                        <constraint firstItem="mWL-Cs-79c" firstAttribute="leading" secondItem="mLh-DK-aE1" secondAttribute="leading" constant="20" id="qrO-uW-fQQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mLh-DK-aE1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G4v-q3-vFt"/>
+                <constraint firstItem="mLh-DK-aE1" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="TmC-pU-cPr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mLh-DK-aE1" secondAttribute="trailing" id="Z5l-5q-4MD"/>
+                <constraint firstItem="mLh-DK-aE1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ygO-qz-7dC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="submitButton" destination="mWL-Cs-79c" id="DYM-C4-VCA"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="62"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.92549019607843142" green="0.32549019607843138" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

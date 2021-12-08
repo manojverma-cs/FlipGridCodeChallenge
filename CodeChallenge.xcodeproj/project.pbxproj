@@ -28,6 +28,10 @@
 		F5E2540D275F302700A191AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E2540C275F302700A191AB /* SceneDelegate.swift */; };
 		F5E25412275F402F00A191AB /* AvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E25411275F402F00A191AB /* AvatarTableViewCell.swift */; };
 		F5E2541A275F405400A191AB /* DataInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E25419275F405400A191AB /* DataInputTableViewCell.swift */; };
+		F5F25A4A2760C40D008AB08A /* FooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F25A492760C40D008AB08A /* FooterViewCell.swift */; };
+		F5F25A4F2760C417008AB08A /* FooterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5F25A4E2760C417008AB08A /* FooterViewCell.xib */; };
+		F5F25A542760C60F008AB08A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F25A532760C60F008AB08A /* Colors.xcassets */; };
+		F5F25A5C2760C91D008AB08A /* SignUpTableViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F25A5B2760C91D008AB08A /* SignUpTableViewController+UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		F5E2540C275F302700A191AB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F5E25411275F402F00A191AB /* AvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarTableViewCell.swift; sourceTree = "<group>"; };
 		F5E25419275F405400A191AB /* DataInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInputTableViewCell.swift; sourceTree = "<group>"; };
+		F5F25A492760C40D008AB08A /* FooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterViewCell.swift; sourceTree = "<group>"; };
+		F5F25A4E2760C417008AB08A /* FooterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterViewCell.xib; sourceTree = "<group>"; };
+		F5F25A532760C60F008AB08A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F5F25A5B2760C91D008AB08A /* SignUpTableViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpTableViewController+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,8 @@
 				F5E25419275F405400A191AB /* DataInputTableViewCell.swift */,
 				F515734927607E9F00CD67CF /* HeaderViewCell.swift */,
 				F515735127607F2B00CD67CF /* HeaderViewCell.xib */,
+				F5F25A492760C40D008AB08A /* FooterViewCell.swift */,
+				F5F25A4E2760C417008AB08A /* FooterViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -160,12 +170,14 @@
 				F5E2540C275F302700A191AB /* SceneDelegate.swift */,
 				F515736C2760834E00CD67CF /* Section.swift */,
 				F51573712760837100CD67CF /* DataModel.swift */,
+				F5F25A5B2760C91D008AB08A /* SignUpTableViewController+UITableView.swift */,
 				F5E253FE275F1A7800A191AB /* SignUpTableViewController.swift */,
 				F51573842760B31100CD67CF /* SignUpTableViewController+CameraManagerDelegate.swift */,
 				F5E253BE275F12B600A191AB /* Main.storyboard */,
 				F515735C2760811100CD67CF /* Localizable.strings */,
 				F51573612760812700CD67CF /* LocalizedStrings.swift */,
 				F5E253C4275F12B700A191AB /* Assets.xcassets */,
+				F5F25A532760C60F008AB08A /* Colors.xcassets */,
 				F5E253C6275F12B700A191AB /* LaunchScreen.storyboard */,
 				F5E253C9275F12B700A191AB /* Info.plist */,
 				F5E253C1275F12B600A191AB /* CodeChallenge.xcdatamodeld */,
@@ -298,8 +310,10 @@
 				F5E253C8275F12B700A191AB /* LaunchScreen.storyboard in Resources */,
 				F5E253C5275F12B700A191AB /* Assets.xcassets in Resources */,
 				F515735D2760811100CD67CF /* Localizable.strings in Resources */,
+				F5F25A4F2760C417008AB08A /* FooterViewCell.xib in Resources */,
 				F5E253C0275F12B600A191AB /* Main.storyboard in Resources */,
 				F515735227607F2B00CD67CF /* HeaderViewCell.xib in Resources */,
+				F5F25A542760C60F008AB08A /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +369,11 @@
 				F507236F2760B83300274365 /* UIAlertController+Ext.swift in Sources */,
 				F5E253C3275F12B600A191AB /* CodeChallenge.xcdatamodeld in Sources */,
 				F5E2541A275F405400A191AB /* DataInputTableViewCell.swift in Sources */,
+				F5F25A4A2760C40D008AB08A /* FooterViewCell.swift in Sources */,
 				F5E253B9275F12B600A191AB /* AppDelegate.swift in Sources */,
 				F51573852760B31100CD67CF /* SignUpTableViewController+CameraManagerDelegate.swift in Sources */,
 				F515737A2760A5CE00CD67CF /* CameraManager.swift in Sources */,
+				F5F25A5C2760C91D008AB08A /* SignUpTableViewController+UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
