@@ -33,12 +33,6 @@ class SignUpTableViewController: UITableViewController {
         setupTableView()
         cameraManager = CameraManager(withPresenter: self)
         cameraManager?.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow),
-                                               name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-
-    @objc func keyboardWillShow(_ notification: Notification) {
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
