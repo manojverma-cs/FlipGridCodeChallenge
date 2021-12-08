@@ -40,6 +40,7 @@ class DataInputTableViewCell: UITableViewCell {
     /// - Parameter dataModel: DataModel object to prefill the data
     func configure(_ dataModel: DataModel, tag: Int) {
         self.dataModel = dataModel
+        textField.text = dataModel.value
         textField.placeholder = dataModel.section.placeholder
         textField.keyboardType = dataModel.section.keyboardType
         textField.isSecureTextEntry = dataModel.section.isSecureTextEntry
