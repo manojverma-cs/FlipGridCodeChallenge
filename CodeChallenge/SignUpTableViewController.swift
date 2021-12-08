@@ -23,7 +23,7 @@ class SignUpTableViewController: UITableViewController {
         static let headerViewCellId = "HeaderViewCell"
         static let footerViewCellId = "FooterViewCell"
         static let signUpConfirmSegue = "signUpConfirmSegue"
-        static let headerViewHeight: CGFloat = 60.0
+        static let headerViewHeight: CGFloat = 80.0
         static let footerViewHeight: CGFloat = 100.0
     }
 

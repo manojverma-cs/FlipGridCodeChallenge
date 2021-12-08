@@ -19,6 +19,7 @@ class AvatarTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarButton.layer.cornerRadius = 15
+        avatarButton.layer.masksToBounds = true
         avatarButton.backgroundColor = .opaqueSeparator
     }
 

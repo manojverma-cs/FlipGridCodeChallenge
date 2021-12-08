@@ -27,6 +27,8 @@ class SignUpConfirmViewController: UIViewController {
     func setupUI() {
         submitButton.setTitle(LocalizedStrings.signinTitle, for: .normal)
         submitButton.layer.cornerRadius = 10
+        profileImageView.layer.cornerRadius = 15
+        profileImageView.layer.masksToBounds = true
         summaryLabel.text = LocalizedStrings.protfolioSubmittedMessage
         for section in sections ?? [] {
             switch section.section {

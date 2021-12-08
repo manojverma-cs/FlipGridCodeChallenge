@@ -12,7 +12,7 @@
 "password.title" = "Password";
 "website.title" = "Website";
 "profileCreation.title" = "Profile Creation";
-"profileCreation.description" = "Use the form below to submit our portfolio. An email and password are frequired.";
+"profileCreation.description" = "Use the form below to submit your portfolio. An email and password are required.";
 "cameraPermission.message" = "App does not have access to your camera. To enable access, tap settings and turn on Camera.";
 "galleryPermission.message" = "App does not have access to your camera. To enable access, tap settings and turn on Gallery.";
 "settings.title" = "Settings";
@@ -20,14 +20,14 @@
 "camera.title" = "Camera";
 "gallery.title" = "Gallery";
 "error.title" = "Error";
-"unknownimage.message" = "Please select and image to proceed";
+"unknownimage.message" = "Please select an image to proceed";
 "unknownerror.message" = "Unknown error occured. Please try again.";
 "empty.avatar.message" = "Please select avatar image";
 "empty.firstname.message" = "Please enter first name";
 "empty.emailaddress.message" = "Please enter email address";
 "empty.password.message" = "Please enter password";
 "empty.website.message" = "Please enter website";
-"protfoliosubmitted.message" = "Your super-awesome protfolio has been successfully submitted! The preview below is what the community will see.";
+"protfoliosubmitted.message" = "Your super-awesome protfolio has been successfully submitted! The preview below is what the community will see!";
 "protfoliosubmitted.title" = "Hello, %@";
 "invalid.email.message" = "Please enter valid email";
 "invalid.website.message" = "Please enter valid website";
